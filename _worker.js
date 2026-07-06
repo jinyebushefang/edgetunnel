@@ -5459,7 +5459,7 @@ async function 请求优选API(urls, 默认端口 = '443', 超时时间 = 3000) 
 					dataLines.forEach(line => {
 						const cols = line.split(',').map(c => c.trim());
 						const wrappedIP = IPV6_PATTERN.test(cols[ipIdx]) ? `[${cols[ipIdx]}]` : cols[ipIdx];
-						const ipItem = `${wrappedIP}:${port}#CF优选 ${cols[delayIdx]}ms ${cols[speedIdx]}MB/s`;
+						const ipItem = `${wrappedIP}:${port}#优选节点 ${cols[delayIdx]}ms ${cols[speedIdx]}MB/s`;
 						// 处理第一个数组 - 优选IP
 						if (API备注名) {
 							const 处理后IP = `${ipItem} [${API备注名}]`;
